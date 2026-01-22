@@ -37,7 +37,7 @@
     <!-- Subtle Global Gradient -->
     <div class="fixed inset-0 bg-gradient-to-br from-primary-light/5 via-white to-secondary-light/20 pointer-events-none -z-20"></div>
 
-    <!-- Navigation Bar (Simplified) -->
+    <!-- Navigation Bar -->
     <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-xl border-b border-slate-100">
         <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
@@ -60,86 +60,131 @@
 
             <div class="prose prose-slate max-w-none text-slate-600 space-y-6">
                 
-                <h2 class="text-xl font-bold text-primary">1. Introduction</h2>
+                <h2 class="text-xl font-bold text-primary mt-8">1. Introduction</h2>
                 <p>Welcome to Tarmease ("we," "us," or "our"). We operate the Tarmease chatbot and associated services (the "Service"), accessible via the Facebook Messenger Platform and our website at <a href="https://www.tarmease.com" class="text-secondary hover:underline">https://www.tarmease.com</a>.</p>
                 <p>We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains what information we collect, how we use it, and your rights in relation to that data. This policy applies to all information collected through our chatbot, website, and any related services, sales, marketing, or events.</p>
-                <div class="bg-blue-50 border-l-4 border-secondary p-4 rounded-r-lg">
+                
+                <div class="bg-blue-50 border-l-4 border-secondary p-4 rounded-r-lg my-6">
                     <p class="font-semibold text-secondary mb-1">Important Notice Regarding Facebook Messenger:</p>
-                    <p class="text-sm">When you interact with Tarmease via Facebook Messenger, you are also subject to Meta Platforms, Inc.'s ("Meta") Privacy Policy and Terms of Service. We process data sent to us by Meta to provide our conversational service to you.</p>
+                    <p class="text-sm">When you interact with Tarmease via Facebook Messenger, you are also subject to Meta Platforms, Inc.'s ("Meta") Privacy Policy and Terms of Service. We process data sent to us by Meta to provide our conversational service to you. While we control the data we collect, Meta independently controls the data processed within its own platform infrastructure.</p>
                 </div>
 
-                <h2 class="text-xl font-bold text-primary">2. Information We Collect</h2>
-                <p>We collect information that allows us to operate the Tarmease chatbot, facilitate interactive experiences, and provide customer support.</p>
+                <h2 class="text-xl font-bold text-primary mt-8">2. Information We Collect</h2>
+                <p>We collect information that allows us to operate the Tarmease chatbot, facilitate interactive experiences, and provide customer support. The types of personal information we collect depend on your interactions with us and the choices you make.</p>
 
-                <h3 class="text-lg font-semibold text-dark">2.1 Information Provided by Meta (Facebook)</h3>
-                <p>When you initiate a conversation with us on Facebook Messenger, Meta provides us with specific information through their API:</p>
+                <h3 class="text-lg font-semibold text-dark mt-6">2.1 Information Provided by Meta (Facebook)</h3>
+                <p>When you initiate a conversation with us on Facebook Messenger, or when you interact with our Facebook Page, Meta provides us with specific information through their API to enable the service:</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Page Scoped ID (PSID):</strong> A unique identifier assigned to your conversation. It does not provide direct access to your public profile URL.</li>
-                    <li><strong>Public Profile Information:</strong> Fields such as first name, last name, profile picture, locale, time zone, and gender, strictly to personalize communication.</li>
-                    <li><strong>Message Content:</strong> The text, images, audio, attachments, and quick-reply selections you send us.</li>
+                    <li><strong>Page Scoped ID (PSID):</strong> A unique, tokenized identifier assigned to your conversation with our specific Page. This allows us to distinguish your session from others and maintain conversation history. It does not provide us with direct access to your external public profile URL or private account details unless you voluntarily provide them.</li>
+                    <li><strong>Public Profile Information:</strong> Depending on your Facebook privacy settings and the specific interactions you have with our bot, we may access public profile fields such as your first name, last name, profile picture, locale (language preference), time zone, and gender. We use this strictly to personalize our communication (e.g., addressing you by name or adjusting the language).</li>
+                    <li><strong>Message Content:</strong> We collect and store the text, images, audio, attachments, and quick-reply selections you send to us in the chat.</li>
                 </ul>
 
-                <h3 class="text-lg font-semibold text-dark">2.2 Information You Provide Directly</h3>
+                <h3 class="text-lg font-semibold text-dark mt-6">2.2 Information You Provide Directly</h3>
+                <p>We collect information you explicitly provide during the conversation to fulfill specific requests, including:</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Contact Details:</strong> Email, phone number, or address provided for shipping or support.</li>
-                    <li><strong>Transaction Data:</strong> Details regarding bookings or orders.</li>
-                    <li><strong>Customer Service Data:</strong> Inquiries, complaints, or feedback.</li>
+                    <li><strong>Contact Details:</strong> Email address, phone number, or physical address (e.g., if you provide these for order shipping or human support follow-up).</li>
+                    <li><strong>Transaction Data:</strong> Details regarding bookings, orders, or specific service inquiries made through the bot.</li>
+                    <li><strong>Customer Service Data:</strong> Details of inquiries, complaints, or feedback you submit.</li>
                 </ul>
 
-                <h3 class="text-lg font-semibold text-dark">2.3 Automatically Collected Technical Data</h3>
-                <p>We and our providers (like Cloudflare) may collect IP addresses, browser types, timestamps, and interaction metrics for security and debugging.</p>
-
-                <h2 class="text-xl font-bold text-primary">3. How We Use Your Information</h2>
-                <ul class="list-decimal pl-5 space-y-2">
-                    <li><strong>To Facilitate the Chatbot Service:</strong> Using PSID and messages to generate responses and maintain context.</li>
-                    <li><strong>To Provide Customer Support:</strong> Resolving issues and answering inquiries.</li>
-                    <li><strong>To Send Administrative Information:</strong> Notifications about accounts or policy changes.</li>
-                    <li><strong>To Enforce Terms and Policies:</strong> Preventing abuse and ensuring platform compliance.</li>
-                    <li><strong>To Improve Our Services:</strong> Analyzing aggregated data to optimize accuracy.</li>
-                </ul>
-                <p><strong>Restrictions on Advertising:</strong> We do not sell your personal data. We do not use Facebook Messenger API data for direct marketing without explicit consent.</p>
-
-                <h2 class="text-xl font-bold text-primary">4. How We Share Your Information</h2>
+                <h3 class="text-lg font-semibold text-dark mt-6">2.3 Automatically Collected Technical Data</h3>
+                <p>When you visit our website or interact with our webhook endpoints via Messenger, we and our infrastructure providers (such as Cloudflare) may collect certain technical data automatically:</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Service Providers:</strong> Vendors like Cloudflare (hosting/security) and Google (data management) who process data under strict instructions.</li>
-                    <li><strong>Legal Obligations:</strong> To comply with laws, court orders, or subpoenas.</li>
-                    <li><strong>Business Transfers:</strong> In connection with mergers, sales, or acquisitions.</li>
+                    <li><strong>Device and Connection Data:</strong> Internet Protocol (IP) address, browser type, operating system, and device identifiers.</li>
+                    <li><strong>Usage Logs:</strong> Timestamps of messages, interaction metrics, and error logs used for debugging and security purposes.</li>
                 </ul>
 
-                <h2 class="text-xl font-bold text-primary">5. International Data Transfers</h2>
-                <p>Our servers are located in the US and potentially other countries. If you access our services from outside the US (including the EEA/UK), note that your information may be transferred to and processed in countries with different data protection laws. We implement safeguards like Standard Contractual Clauses (SCCs).</p>
+                <h2 class="text-xl font-bold text-primary mt-8">3. How We Use Your Information</h2>
+                <p>We process your information for purposes based on legitimate business interests, the fulfillment of our contract with you, compliance with our legal obligations, and/or your consent.</p>
+                <p>We use the information we collect or receive for the following purposes:</p>
+                <ol class="list-decimal pl-5 space-y-2">
+                    <li><strong>To Facilitate the Chatbot Service (Contractual Necessity):</strong> We use your PSID and message content to generate automated responses, maintain conversation history (context), and execute commands you request (e.g., "Check my order status"). This is the core function of the application.</li>
+                    <li><strong>To Provide Customer Support (Legitimate Interest):</strong> We use your message history and contact details to resolve technical issues, answer questions, or respond to your inquiries.</li>
+                    <li><strong>To Send Administrative Information (Legitimate Interest):</strong> We may send you notifications regarding your account, product updates, or changes to our terms and policies.</li>
+                    <li><strong>To Enforce Terms and Policies (Legal Obligation):</strong> We process data to ensure compliance with Meta’s Platform Terms, prevent abuse (such as spam or harassment), and protect the integrity of our service.</li>
+                    <li><strong>To Improve Our Services (Legitimate Interest):</strong> We analyze aggregated, anonymized usage data to understand how users interact with our bot, improve its accuracy, and optimize user experience.</li>
+                </ol>
+                <p><strong>Restrictions on Advertising:</strong> We do not sell your personal data to third parties. Furthermore, consistent with Meta's Platform Terms, we do not use data obtained from the Facebook Messenger API for advertising creative or direct marketing without your explicit, separate consent.</p>
 
-                <h2 class="text-xl font-bold text-primary">6. Data Retention</h2>
+                <h2 class="text-xl font-bold text-primary mt-8">4. How We Share Your Information</h2>
+                <p>We only share information with the following categories of third parties under specific conditions:</p>
+
+                <h3 class="text-lg font-semibold text-dark mt-6">4.1 Service Providers (Data Processors)</h3>
+                <p>We utilize trusted third-party vendors to operate our infrastructure. These vendors are contractually bound to protect your data and only process it according to our instructions.</p>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Conversation Logs:</strong> Retained for up to 12 months for context and support, then deleted or anonymized.</li>
-                    <li><strong>Technical Logs:</strong> Retained for 30 days for security auditing.</li>
+                    <li><strong>Cloudflare, Inc. (USA/Global):</strong> We use Cloudflare Workers and D1 Storage to host our application logic and database. Cloudflare acts as our data processor, providing secure hosting, encryption at rest, and DDoS protection.</li>
+                    <li><strong>Google LLC (USA):</strong> We may use Google Workspace (e.g., Sheets/Docs) for internal data management or support ticket logging. Google processes this data under strict enterprise confidentiality terms.</li>
                 </ul>
 
-                <h2 class="text-xl font-bold text-primary">7. Data Security</h2>
-                <p>Measures include encryption at rest (AES-256), encryption in transit (TLS/SSL), and strict access controls for personnel.</p>
+                <h3 class="text-lg font-semibold text-dark mt-6">4.2 Legal Obligations</h3>
+                <p>We may disclose your information where we are legally required to do so to comply with applicable law, governmental requests, a judicial proceeding, court order, or legal process, such as in response to a court order or a subpoena (including in response to public authorities to meet national security or law enforcement requirements).</p>
 
-                <h2 class="text-xl font-bold text-primary">8. Your Privacy Rights</h2>
-                <h3 class="text-lg font-semibold text-dark">8.1 EEA/UK Users (GDPR)</h3>
-                <p>Rights include access, rectification, erasure ("Right to be Forgotten"), restriction, objection, and portability. Contact <a href="mailto:privacy@tarmease.com" class="text-primary hover:underline">privacy@tarmease.com</a> to exercise these rights.</p>
+                <h3 class="text-lg font-semibold text-dark mt-6">4.3 Business Transfers</h3>
+                <p>We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company. In such an event, we will ensure the successor entity is bound by the terms of this Privacy Policy.</p>
 
-                <h3 class="text-lg font-semibold text-dark">8.2 California Residents (CCPA/CPRA)</h3>
-                <p>Rights include knowing what data is collected, requesting deletion, and opting out of sales (we do not sell data). You also have rights under the "Shine the Light" law.</p>
+                <h2 class="text-xl font-bold text-primary mt-8">5. International Data Transfers</h2>
+                <p>Our servers and third-party service providers (like Cloudflare and Google) are located in the United States and potentially other countries via distributed global networks. If you are accessing our services from outside the United States, please be aware that your information may be transferred to, stored, and processed by us in our facilities and by those third parties in countries that may have different data protection laws than your country of residence.</p>
+                <p>For users in the European Economic Area (EEA), UK, and Switzerland: We have taken appropriate safeguards to require that your personal information will remain protected in accordance with this Privacy Policy. These include implementing the European Commission's Standard Contractual Clauses (SCCs) for transfers of personal information between our group companies and between us and our third-party providers, which require all recipients to protect all personal information that they process originating from the EEA or UK in accordance with European data protection laws.</p>
 
-                <h3 class="text-lg font-semibold text-dark">8.3 Facebook Platform Controls</h3>
-                <p>You can block/mute our bot in Messenger or revoke permissions in your Facebook Settings & Privacy.</p>
+                <h2 class="text-xl font-bold text-primary mt-8">6. Data Retention</h2>
+                <p>We will only keep your personal information for as long as it is necessary for the purposes set out in this privacy policy, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Conversation Logs:</strong> We retain chat history for a period of up to 12 months to provide consistent customer support and context for returning users. After this period, data is either deleted or anonymized.</li>
+                    <li><strong>Technical Logs:</strong> Infrastructure logs (IP addresses, request headers) are retained for 30 days for security auditing and then deleted.</li>
+                </ul>
 
-                <h2 class="text-xl font-bold text-primary">9. Cookie Policy</h2>
-                <p>We use essential and analytics cookies on our website. You can opt-out of analytics cookies via browser settings. Note that Meta governs cookies within the Messenger interface.</p>
+                <h2 class="text-xl font-bold text-primary mt-8">7. Data Security</h2>
+                <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Encryption at Rest:</strong> User data stored in our databases (Cloudflare D1) is encrypted using industry-standard AES-256 algorithms.</li>
+                    <li><strong>Encryption in Transit:</strong> All communications between your device, Meta's servers, and our servers are secured via Transport Layer Security (TLS/SSL) to prevent interception.</li>
+                    <li><strong>Access Controls:</strong> We strictly limit access to personal data to authorized personnel who need to know that information in order to process it for us, and who are subject to strict contractual confidentiality obligations.</li>
+                </ul>
 
-                <h2 class="text-xl font-bold text-primary">10. Do-Not-Track Features</h2>
-                <p>We do not currently respond to DNT browser signals as no uniform standard exists.</p>
+                <h2 class="text-xl font-bold text-primary mt-8">8. Your Privacy Rights</h2>
+                <p>Depending on your location, you have specific rights regarding your personal information.</p>
 
-                <h2 class="text-xl font-bold text-primary">11. Updates to This Policy</h2>
-                <p>We may update this policy. Material changes will be notified via prominent notice or chatbot notification.</p>
+                <h3 class="text-lg font-semibold text-dark mt-6">8.1 Rights for EEA/UK Users (GDPR)</h3>
+                <p>If you are located in the EEA or UK, you have the following rights:</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Right to Access</li>
+                    <li>Right to Rectification</li>
+                    <li>Right to Erasure ("Right to be Forgotten")</li>
+                    <li>Right to Restriction</li>
+                    <li>Right to Object</li>
+                    <li>Data Portability</li>
+                </ul>
+                <p>To exercise these rights, please contact us at <a href="mailto:privacy@tarmease.com" class="text-secondary hover:underline">privacy@tarmease.com</a>.</p>
 
-                <h2 class="text-xl font-bold text-primary">12. Contact Us</h2>
-                <p>If you have questions, please contact our Privacy Team:</p>
-                <p class="font-bold">Email: <a href="mailto:privacy@tarmease.com" class="text-primary hover:underline">privacy@tarmease.com</a></p>
+                <h3 class="text-lg font-semibold text-dark mt-6">8.2 Rights for California Residents (CCPA/CPRA)</h3>
+                <p>If you are a resident of California, you are granted specific rights regarding access to your personal information, including the Right to Know, Right to Delete, and Right to Opt-Out of sales (we do not sell your personal information).</p>
+                <p><strong>Shine the Light Law:</strong> California residents may request information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes once a year.</p>
+
+                <h3 class="text-lg font-semibold text-dark mt-6">8.3 Facebook Platform Controls</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Block/Mute:</strong> You can block or mute the Tarmease bot in Messenger at any time.</li>
+                    <li><strong>App Settings:</strong> You can review and revoke permissions in your Facebook "Settings & Privacy" > "Settings" > "Apps and Websites".</li>
+                </ul>
+
+                <h2 class="text-xl font-bold text-primary mt-8">9. Cookie Policy</h2>
+                <p>We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information when you visit our website tarmease.com.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Essential Cookies:</strong> Necessary for the website to function.</li>
+                    <li><strong>Analytics Cookies:</strong> We use these to understand how visitors interact with our website.</li>
+                </ul>
+                <p class="text-sm mt-2">Note: We do not use cookies within the Facebook Messenger chat interface itself. The tracking technologies utilized by the Messenger Platform are governed by Meta's Cookie Policy.</p>
+
+                <h2 class="text-xl font-bold text-primary mt-8">10. Controls for Do-Not-Track Features</h2>
+                <p>We do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online, as no uniform standard exists.</p>
+
+                <h2 class="text-xl font-bold text-primary mt-8">11. Updates to This Policy</h2>
+                <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Last Updated" date. If we make material changes, we may notify you via prominent notice or chatbot notification.</p>
+
+                <h2 class="text-xl font-bold text-primary mt-8">12. Contact Us</h2>
+                <p>If you have questions or comments about this policy, or if you wish to exercise your data rights, you may contact our Privacy Team at:</p>
+                <p class="font-bold text-secondary mt-4">Tarmease Privacy Team</p>
+                <p>Email: <a href="mailto:privacy@tarmease.com" class="text-primary hover:underline">privacy@tarmease.com</a></p>
             </div>
         </div>
     </section>
