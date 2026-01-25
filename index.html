@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="scroll-smooth overflow-x-hidden">
+<html lang="en" dir="ltr" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -52,15 +52,16 @@
     body {
       font-family: 'Outfit', 'Noto Sans Arabic', sans-serif;
       -webkit-tap-highlight-color: transparent;
+      /* Removed global overflow-x-hidden to fix sticky positioning */
     }
 
     /* Only keeping logic for content switching; everything else is Tailwind */
     .lang-ar [data-en] {
-      display: none;
+      display: none !important;
     }
 
     .lang-en [data-ar] {
-      display: none;
+      display: none !important;
     }
 
     /* Prevent layout shifts during reveal animations */
@@ -71,12 +72,12 @@
   </style>
 </head>
 
-<body class="lang-en text-dark min-h-screen bg-bg-light overflow-x-hidden relative">
+<body class="lang-en text-dark min-h-screen bg-bg-light relative">
 
   <!-- Subtle Global Gradient -->
   <div class="fixed inset-0 bg-gradient-to-br from-primary-light/5 via-white to-secondary-light/20 pointer-events-none -z-20"></div>
 
-  <!-- Animated Blobs - Wrapped in a container that prevents overflow issues -->
+  <!-- Animated Blobs - Wrapped in a fixed container with overflow hidden to prevent scrollbars -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
     <div class="absolute top-0 -left-4 w-72 h-72 bg-primary-light opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
     <div class="absolute top-0 -right-4 w-72 h-72 bg-secondary-light opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -110,7 +111,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="pt-48 pb-20 px-6">
+  <section class="pt-48 pb-20 px-6 overflow-hidden">
     <div class="max-w-5xl mx-auto text-center">
       <div class="reveal opacity-100 translate-y-0 inline-block mb-4 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold">
         <span data-en>Tarmease... {coding with ease}</span>
@@ -140,9 +141,11 @@
 
   <!-- Services Section -->
   <section id="services" class="py-20 px-6">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
-        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">🤖</div>
+    <!-- Changed to Flexbox with wrapping and centering -->
+    <div class="max-w-[90rem] mx-auto flex flex-wrap justify-center gap-6">
+      <!-- Card 1: Chatbots -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 w-full sm:w-64 min-h-[20rem] flex flex-col items-center text-center p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
+        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shrink-0">🤖</div>
         <h3 class="text-2xl font-bold mb-4 text-secondary">
           <span data-en>Smart Chatbots</span>
           <span data-ar>شات بوت ذكي</span>
@@ -152,51 +155,245 @@
           <span data-ar>بيرد على العملاء على واتساب وفيسبوك وأنت نايم. ولا بيطلب زيادة ولا أجازة.</span>
         </p>
       </div>
-      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
-        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">⚡</div>
+
+      <!-- Card 2: Web Development -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 w-full sm:w-64 min-h-[20rem] flex flex-col items-center text-center p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
+        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shrink-0">🌐</div>
         <h3 class="text-2xl font-bold mb-4 text-secondary">
-          <span data-en>Super Speed</span>
-          <span data-ar>سرعة خارقة</span>
+          <span data-en>Sleek Websites</span>
+          <span data-ar>مواقع شيك</span>
         </h3>
         <p class="text-slate-600">
-          <span data-en>Data entry? Reporting? Our AI does it in 0.2 seconds. Faster than a Microbus driver in Salah Salem.</span>
-          <span data-ar>إدخال بيانات؟ تقارير؟ الـ AI بيخلصها في ثانية. أسرع من سواق ميكروباص في صلاح سالم.</span>
+          <span data-en>Your 24/7 showroom. Loads like a bullet and cleaner than a newly paved road.</span>
+          <span data-ar>واجهتك اللي شغاله 24 ساعة. بتفتح زي الطلقة وأنضف من طريق لسه مرصوف.</span>
         </p>
       </div>
-      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
-        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">📈</div>
+
+      <!-- Card 3: Logo Design -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 w-full sm:w-64 min-h-[20rem] flex flex-col items-center text-center p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
+        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shrink-0">🎨</div>
         <h3 class="text-2xl font-bold mb-4 text-secondary">
-          <span data-en>Easy Insights</span>
-          <span data-ar>تحليلات بسيطة</span>
+          <span data-en>Logo & Identity</span>
+          <span data-ar>لوجو وهوية</span>
         </h3>
         <p class="text-slate-600">
-          <span data-en>Know what's happening in your business without looking at messy spreadsheets. Clear, simple, and light.</span>
-          <span data-ar>اعرف إيه اللي بيحصل في شغلك من غير ما تدوخ في جداول إكسيل معقدة. كلام واضح وبسيط.</span>
+          <span data-en>Look Expensive. We build brands that people trust immediately. No generic icons allowed.</span>
+          <span data-ar>خليك برنس. بنعملك لوجو وهوية تخلي الناس تثق فيك من أول نظرة. مش شغل أي كلام.</span>
+        </p>
+      </div>
+
+      <!-- Card 4: Social Media -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 w-full sm:w-64 min-h-[20rem] flex flex-col items-center text-center p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
+        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shrink-0">🤳</div>
+        <h3 class="text-2xl font-bold mb-4 text-secondary">
+          <span data-en>Social Buzz</span>
+          <span data-ar>سوشيال ميديا</span>
+        </h3>
+        <p class="text-slate-600">
+          <span data-en>We handle the content so you don't have to dance on TikTok. Unless you really want to.</span>
+          <span data-ar>سيب المحتوى علينا عشان متضطرش ترقص على تيك توك. إلا لو أنت عايز يعني.</span>
+        </p>
+      </div>
+
+      <!-- Card 5: Ads -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 w-full sm:w-64 min-h-[20rem] flex flex-col items-center text-center p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
+        <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform shrink-0">💸</div>
+        <h3 class="text-2xl font-bold mb-4 text-secondary">
+          <span data-en>Smart Ads</span>
+          <span data-ar>إعلانات ذكية</span>
+        </h3>
+        <p class="text-slate-600">
+          <span data-en>Ads Manager is a maze. We'll handle the setup and management so you don't have to figure it out alone.</span>
+          <span data-ar>مدير الإعلانات ده متاهة. سيبنا احنا نظبطلك الكلام وندير الحملات بدل ما تتوه في النص.</span>
         </p>
       </div>
     </div>
   </section>
 
   <!-- Social Proof Section -->
-  <section class="py-24 bg-secondary text-white overflow-hidden relative text-center">
-    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="max-w-4xl mx-auto px-6 relative z-10">
-      <h2 class="reveal opacity-0 translate-y-8 transition-all duration-700 text-3xl md:text-5xl font-bold mb-8">
-        <span data-en>"Wait, automation is for everyone?"</span>
-        <span data-ar>"ثانية واحدة، الأتمتة دي لأي حد؟"</span>
-      </h2>
-      <p class="reveal opacity-0 translate-y-8 transition-all duration-700 text-slate-200 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-        <span data-en>Yes! Whether you sell Koshary or Property, Tarmease helps you do it smarter.</span>
-        <span data-ar>أيوة! سواء بتبيع كشري أو بتبيع عقارات، ترميز هتخليك تخلص شغلك بذكاء.</span>
-      </p>
-      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 flex flex-wrap justify-center gap-10">
-        <span class="text-5xl hover:scale-125 transition-transform cursor-default filter drop-shadow-lg">🛠️</span>
-        <span class="text-5xl hover:scale-125 transition-transform cursor-default filter drop-shadow-lg">📦</span>
-        <span class="text-5xl hover:scale-125 transition-transform cursor-default filter drop-shadow-lg">🏗️</span>
-        <span class="text-5xl hover:scale-125 transition-transform cursor-default filter drop-shadow-lg">🏢</span>
+  <!-- Updated Height: 350vh for faster scrolling -->
+  <section id="social-proof-scroll" class="relative h-[350vh] bg-secondary text-white">
+    <div class="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
+      <!-- Background Effect -->
+      <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
+      
+      <div class="max-w-4xl mx-auto px-6 relative z-10 text-center w-full">
+        <h2 class="text-3xl md:text-5xl font-bold mb-16">
+          <span data-en>"Wait, automation is for everyone?"</span>
+          <span data-ar>"ثانية واحدة، الأتمتة دي لأي حد؟"</span>
+        </h2>
+
+        <!-- Icons Line - Updated for 5 icons and mobile responsiveness -->
+        <div class="flex justify-center items-end gap-2 sm:gap-4 md:gap-12 mb-12 h-24 flex-nowrap">
+          <!-- Icon 1: Sole Worker -->
+          <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="0">
+            <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🛠️</span>
+          </div>
+          <!-- Icon 2: Clinic/Small Biz -->
+          <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="1">
+            <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🩺</span>
+          </div>
+          <!-- Icon 3: Workshop (New) -->
+          <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="2">
+            <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🪚</span>
+          </div>
+          <!-- Icon 4: Restaurant -->
+          <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="3">
+            <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🍔</span>
+          </div>
+          <!-- Icon 5: Big Corp -->
+          <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="4">
+            <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🏢</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Text Area -->
+        <div class="min-h-[120px] flex flex-col items-center justify-start">
+           <!-- Indicator Line (Decor) -->
+           <div class="w-16 h-1 bg-primary rounded-full mb-6 transition-all duration-300"></div>
+           
+           <!-- Fixed attributes to use data-en/data-ar so CSS handles toggling -->
+           <p id="proof-text-en" class="text-xl md:text-2xl font-medium text-slate-100 transition-all duration-500 transform translate-y-0 opacity-100 max-w-2xl leading-relaxed" data-en>
+             <!-- JS will inject text here -->
+           </p>
+           <p id="proof-text-ar" class="text-xl md:text-2xl font-medium text-slate-100 transition-all duration-500 transform translate-y-0 opacity-100 max-w-2xl leading-relaxed mt-2" data-ar>
+             <!-- JS will inject text here -->
+           </p>
+        </div>
+
+        <!-- Static Punchline -->
+        <!-- Added mb-16 to push content up on mobile, preventing overlap with the scroll hint -->
+        <div class="mt-4 mb-16 md:mb-0 z-20 px-4">
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary-light">
+                <span data-en>Whatever your size, we've got you covered. 🤝</span>
+                <span data-ar>مهما كان حجم شغلك، إحنا في ضهرك. 🤝</span>
+            </h3>
+        </div>
+      </div>
+      
+      <!-- Scroll Prompt (Visible only at start) -->
+      <div id="scroll-hint" class="absolute bottom-10 animate-bounce opacity-50 text-sm">
+        <span data-en>Scroll to explore</span>
+        <span data-ar>انزل عشان تشوف</span>
       </div>
     </div>
   </section>
+
+  <!-- Script for Scroll Interaction -->
+  <script>
+    const proofData = [
+      {
+        en: "Even if you're a skilled craftsman working with your own hands.",
+        ar: "حتى لو صنايعي حريف وشغال بدراعك."
+      },
+      {
+        en: "Or a doctor running a clinic with a waiting room full of patients.",
+        ar: "أو دكتور فاتح عيادتك والناس واقفة طوابير برة."
+      },
+      {
+        en: "Or a busy workshop crafting wonders by hand.",
+        ar: "أو ورشة شغالة نار وبتطلع شغل يتوزن بالدهب."
+      },
+      {
+        en: "Maybe you run the tastiest burger joint in the neighborhood.",
+        ar: "أو عندك مطعم وعامل أحلى برجر في المنطقة كلها."
+      },
+      {
+        en: "Or a CEO managing a huge HQ and big teams.",
+        ar: "أو حتى مدير شركة كبيرة وقد الدنيا وبتدير الليلة كلها."
+      }
+    ];
+
+    const section = document.getElementById('social-proof-scroll');
+    const icons = document.querySelectorAll('.proof-icon');
+    const textEnEl = document.getElementById('proof-text-en');
+    const textArEl = document.getElementById('proof-text-ar');
+    const scrollHint = document.getElementById('scroll-hint');
+    let currentIndex = -1;
+
+    function updateProofSection() {
+      // Need section to be available
+      if (!section) return;
+
+      // Calculate scroll progress within the section
+      const rect = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight - window.innerHeight;
+      
+      // Safety check: if sectionHeight is <= 0 (e.g. before layout ready), avoid division by zero
+      if (sectionHeight <= 0) return;
+
+      // Calculate progress (0 to 1) based on top position
+      // We multiply by -1 because rect.top becomes negative as we scroll down
+      let progress = (rect.top * -1) / sectionHeight;
+      
+      // Handle NaN cases just to be safe
+      if (isNaN(progress)) progress = 0;
+
+      // Clamp progress between 0 and 1
+      if (progress < 0) progress = 0;
+      if (progress > 1) progress = 1;
+
+      // Determine which index we are at (0 to 4)
+      const index = Math.min(Math.floor(progress * proofData.length), proofData.length - 1);
+      
+      // Critical Safety Check: Ensure data exists at this index before accessing
+      if (!proofData[index]) return;
+
+      // Hide scroll hint once user starts scrolling deep
+      if (progress > 0.1 && scrollHint) {
+        scrollHint.style.opacity = '0';
+      } else if (scrollHint) {
+        scrollHint.style.opacity = '0.5';
+      }
+
+      // Only update DOM if index changed
+      if (index !== currentIndex) {
+        currentIndex = index;
+
+        // 1. Update Icons
+        icons.forEach((icon, i) => {
+          if (i === index) {
+            // Active State
+            icon.classList.remove('opacity-30', 'scale-75', 'filter', 'grayscale');
+            icon.classList.add('opacity-100', 'scale-125');
+          } else {
+            // Inactive State
+            icon.classList.add('opacity-30', 'scale-75', 'filter', 'grayscale');
+            icon.classList.remove('opacity-100', 'scale-125');
+          }
+        });
+
+        // 2. Update Text with a quick fade effect
+        if (textEnEl && textArEl) {
+            // Fade out
+            textEnEl.style.opacity = '0';
+            textArEl.style.opacity = '0';
+            textEnEl.style.transform = 'translateY(10px)';
+            textArEl.style.transform = 'translateY(10px)';
+
+            setTimeout(() => {
+              // Safety check again inside timeout
+              if (proofData[index]) {
+                  // Change text content (CSS handles visibility now)
+                  textEnEl.textContent = proofData[index].en;
+                  textArEl.textContent = proofData[index].ar;
+                  
+                  // Fade in
+                  textEnEl.style.opacity = '1';
+                  textArEl.style.opacity = '1';
+                  textEnEl.style.transform = 'translateY(0)';
+                  textArEl.style.transform = 'translateY(0)';
+              }
+            }, 200);
+        }
+      }
+    }
+
+    // Attach scroll listener
+    window.addEventListener('scroll', updateProofSection);
+    // Initial call
+    updateProofSection();
+  </script>
 
   <!-- Social Media Section -->
   <section class="py-20 px-6 bg-white/10">
