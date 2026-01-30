@@ -52,10 +52,8 @@
     body {
       font-family: 'Outfit', 'Noto Sans Arabic', sans-serif;
       -webkit-tap-highlight-color: transparent;
-      /* Removed global overflow-x-hidden to fix sticky positioning */
     }
 
-    /* Only keeping logic for content switching; everything else is Tailwind */
     .lang-ar [data-en] {
       display: none !important;
     }
@@ -64,7 +62,6 @@
       display: none !important;
     }
 
-    /* Prevent layout shifts during reveal animations */
     .reveal {
       will-change: transform, opacity;
       backface-visibility: hidden;
@@ -77,7 +74,7 @@
   <!-- Subtle Global Gradient -->
   <div class="fixed inset-0 bg-gradient-to-br from-primary-light/5 via-white to-secondary-light/20 pointer-events-none -z-20"></div>
 
-  <!-- Animated Blobs - Wrapped in a fixed container with overflow hidden to prevent scrollbars -->
+  <!-- Animated Blobs -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
     <div class="absolute top-0 -left-4 w-72 h-72 bg-primary-light opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
     <div class="absolute top-0 -right-4 w-72 h-72 bg-secondary-light opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
@@ -89,7 +86,9 @@
     <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 flex items-center justify-center">
-          <img src="assets/logo.png" alt="Tarmease Logo" class="w-10 h-10 object-contain" onerror="this.style.display='none'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1267" height="1491" viewBox="0 0 1267 1491">
+            <path d="M1024 295 407 657v729l617 362 617-362V657Z" style="display:inline;opacity:1;fill:#092040;fill-opacity:1;stroke:none;stroke-width:8.76798;stroke-dasharray:none;stroke-opacity:1" transform="translate(-390 -276)"/><path d="M1401 727a46 46 0 1 0 0 93 46 46 0 0 0 0-93m110 0a46 46 0 1 0 0 93 46 46 0 0 0 0-93m-227 145v323s-2 39-45 40h-90v85h100c123-8 120-121 120-121v-26h181V872h-84v217h-97V872Z" style="display:inline;opacity:1;fill:#ebaa54;fill-opacity:1;stroke:none;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" transform="translate(-390 -276)"/><path d="M959 1272a46 46 0 1 1-92 0 46 46 0 0 1 92 0m-111 0a46 46 0 1 1-92 0 46 46 0 0 1 92 0M721 774a46 46 0 1 1-93 0 46 46 0 0 1 93 0m-89 98v318c0 23-16 45-44 45h-91v85h103c69-3 117-59 117-117v-30h85c42-1 66-34 66-34s22 35 77 34h266V872h-129c-86 0-120 52-120 115v56c1 25 13 46 13 46h-50s-29 3-30-35V872h-84v183c-1 36-29 34-29 34h-65V872Zm454 74h40v143h-50s-29-6-29-45v-59c0-40 39-39 39-39" style="display:inline;opacity:1;fill:#fff;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1" transform="translate(-390 -276)"/><path d="M1024 276 390 647v749l634 371v-59l-583-341V676l583-341Z" style="display:inline;opacity:1;fill:#d77f41;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1" transform="translate(-390 -276)"/><path d="M1024 276v59l583 341v691l-583 341v59l633-371V647Z" style="display:inline;opacity:1;fill:#d9643d;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1" transform="translate(-390 -276)"/><path d="M904 1317v99l39 39v205l19 12v-225l-39-38v-92zm-187 19a31 31 0 1 0 19 54l127 74v60l-279-164-10 17 307 180v-104l-135-80a31 31 0 0 0-29-37m-1 16q4 0 7 2a15 15 0 1 1-7-2m374 125a31 31 0 0 0-9 60v138l18-11v-127a31 31 0 0 0-9-60m0 16a15 15 0 1 1 0 29 15 15 0 0 1 0-29m367-269v70l-201 118h-85v19h91l213-126v-81zm73 1v97l-373 218v90l19-11v-67l373-219v-108ZM879 420l-19 11v68L499 710v127h19V722l361-213Zm316 82v139a31 31 0 1 0 19 0V535l267 157 9-16zm9 154a15 15 0 1 1 0 29 15 15 0 0 1 0-29M952 377l-19 11v173a31 31 0 1 0 19 0zm-9 199a15 15 0 1 1 0 29 15 15 0 0 1 0-29m172-188v174a31 31 0 1 0 19 0V399Zm9 188a15 15 0 1 1 0 30 15 15 0 0 1 0-30m-100 801a31 31 0 0 0-9 60v266l9 5 9-5v-266a31 31 0 0 0-9-60m0 16a15 15 0 1 1 0 30 15 15 0 0 1 0-30m0-1058-9 6v139a31 31 0 1 0 18 0V341Zm0 160a15 15 0 1 1 0 29 15 15 0 0 1 0-29" style="display:inline;opacity:.5;fill:#378b85;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1" transform="translate(-390 -276)"/>
+          </svg>
         </div>
         <span class="font-extrabold text-xl tracking-tight hidden sm:block">
           <span data-en>Tarmease</span>
@@ -111,21 +110,43 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="pt-48 pb-20 px-6 overflow-hidden">
+  <section class="pt-32 pb-20 px-6 overflow-hidden">
     <div class="max-w-5xl mx-auto text-center">
-      <div class="reveal opacity-100 translate-y-0 inline-block mb-4 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold">
+      
+      <!-- Full Featured SVG Logo in Hero -->
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 flex justify-center mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 2048 2048" class="drop-shadow-2xl">
+          <defs>
+            <path id="c" d="M727 608h175v78H727z"/><path id="b" d="M727 608h175v78H727z"/>
+            <clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M1024 110.2a913.8 913.8 0 1 0 0 1827.6 913.8 913.8 0 0 0 0-1827.6m0 75.6L1247.8 317l25.4-43.3a9 9 0 0 1 12.5-3.3L1532 414.6a9 9 0 0 1 3.2 12.5l-25.3 43.2 223.3 130.8v185.7h52.5c4.3 0 7.8 3.5 7.8 7.8v456.2c0 4.3-3.5 7.8-7.8 7.8h-52.5V1442l-170.7 100 24.8 42.3a9 9 0 0 1-3.2 12.5l-323.5 189.4-28 16.4a9 9 0 0 1-12.5-3.2l-24.9-42.4-171.2 100.2L852.7 1757l-24.8 42.4a9 9 0 0 1-12.5 3.2s-319-186.8-323.5-189.3l-28-16.5a9 9 0 0 1-3.3-12.5l24.8-42.4-170.6-99.9v-183.4h-52.5a8 8 0 0 1-7.9-7.8V794.6c0-4.3 3.5-7.8 7.9-7.8h52.5V601.1L538 470.3l-25.3-43.2a9 9 0 0 1 3.3-12.5l246.3-144.3a9 9 0 0 1 12.5 3.3L800 317z" style="display:inline;opacity:1;fill:#092040;fill-opacity:1;stroke:none;stroke-width:1.78476;stroke-dasharray:none;stroke-opacity:.306061"/></clipPath>
+          </defs>
+          <circle cx="1024" cy="1024" r="944.9" style="display:inline;opacity:1;fill:#092040;fill-opacity:1;stroke:none;stroke-width:1.84554;stroke-dasharray:none;stroke-opacity:.306061"/>
+          <path d="M1024 72.6A951.4 951.4 0 0 0 72.6 1024a951.4 951.4 0 0 0 951.4 951.4 951.4 951.4 0 0 0 951.4-951.4A951.4 951.4 0 0 0 1024 72.6m0 14.8a936.6 936.6 0 0 1 936.6 936.6 936.6 936.6 0 0 1-936.6 936.6A936.6 936.6 0 0 1 87.4 1024 936.6 936.6 0 0 1 1024 87.4" style="display:inline;opacity:1;fill:#225776;fill-opacity:1;stroke:none;stroke-width:1.85829;stroke-dasharray:none;stroke-opacity:.554545"/>
+          <path d="M-20.8 31.1v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m55-2048v2048m-2035-2048h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048m-2048 55h2048" clip-path="url(#a)" style="display:inline;opacity:.5;fill:none;stroke:#103e52;stroke-width:4px;stroke-opacity:1"/>
+          <path d="M1400.7 727.4a46.1 46.1 0 1 0 0 92.3 46.1 46.1 0 0 0 0-92.3m110.4 0a46.1 46.1 0 1 0 0 92.3 46.1 46.1 0 0 0 0-92.3m-227 144.3v301.6l.2 22s-2.7 38.6-45 40h-90.1v84.6h99.5c122.9-8.3 120.1-121 120.1-121v-25.6h181.6V871.6h-84.7v217h-96.9v-217Z" style="display:inline;opacity:1;fill:#ebaa54;fill-opacity:1;stroke:none;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M959.2 1271.8a46.1 46.1 0 1 1-92.2 0 46.1 46.1 0 0 1 92.2 0m-110.9 0a46.1 46.1 0 1 1-92.2 0 46.1 46.1 0 0 1 92.2 0M720.6 773.5a46.1 46.1 0 1 1-92.3 0 46.1 46.1 0 0 1 92.3 0M632 871.7v318c0 22.9-16.5 45-44.3 45.5H497v84.7h103c69.3-3 116.7-58.6 116.7-117v-29.6h85.6c41.7-1.2 65.6-34.4 65.6-34.4s22.5 34.7 76.7 34.4H1211V871.7h-128.5c-86 0-119.9 52.8-119.9 114.9v56.2a97 97 0 0 0 12.4 45.8h-50.3s-28.6 3-29.3-34.2V871.7h-84.7v183.5c-.4 35.6-29 33.4-29 33.4h-64.8v-217Zm454 74.7h40.1v142.2h-50.4s-28.6-5.5-28.6-44.8v-59c0-39.7 39-38.4 39-38.4" style="display:inline;opacity:1;fill:#fff;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M1024 276 390.5 647V1396l633.5 371v-59L441.3 1367V676L1024 335Z" style="display:inline;opacity:1;fill:#d77f41;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M1024 276v59l582.6 341.1V1367L1024 1708v59l633.5-370.9V647Z" style="display:inline;opacity:1;fill:#d9643d;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M903.7 1317v99.4l39 38.7v205.4l18.8 11v-224.3l-39-38.7V1317a46 46 0 0 1-18.8 0m-187 18.5a30.8 30.8 0 1 0 19 54.2l126.8 74.5v59.8l-279-163.7-9.5 16.2L881.4 1557v-104.3L745.8 1373a30.8 30.8 0 0 0-29.1-37.5m-.5 16.2q3.5 0 6.9 2a14.6 14.6 0 1 1-7-2m373.9 124.9a30.8 30.8 0 0 0-9.5 60.2v138.1l18.9-11v-127.1a30.8 30.8 0 0 0-9.4-60.2m0 16.2a14.6 14.6 0 1 1 0 29.2 14.6 14.6 0 0 1 0-29.2m366.5-268.4v69.9l-201 117.6h-84.4v18.8h90.4l213.8-125.6v-80.7zm73.8 1.1v96.4l-373.2 218.4v89.8l18.8-11V1552l373.2-219.3v-107.2ZM878.7 420.1l-18.9 11v67.5l-361 211.3v127h18.9V721.4l361-212Zm316.2 81.5v139.6a30.8 30.8 0 1 0 18.8 0V535.5l267.1 156.3 9.5-16.2zm9.4 154.3a14.6 14.6 0 1 1 0 29.3 14.6 14.6 0 0 1 0-29.3M952 377.1l-18.8 11v173.3a30.8 30.8 0 1 0 18.8 0zm-9.4 199a14.6 14.6 0 1 1 0 29.2 14.6 14.6 0 0 1 0-29.2m172.3-187.9v173.5a30.8 30.8 0 1 0 18.8 0V399.3Zm9.4 188.2a14.6 14.6 0 1 1 0 29.3 14.6 14.6 0 0 1 0-29.3m-100.3 801a30.8 30.8 0 0 0-9.4 60v265.2l9.4 5.5 9.4-5.5v-265.1a30.8 30.8 0 0 0-9.4-60.2m0 16a14.6 14.6 0 1 1 0 29.4 14.6 14.6 0 0 1 0-29.3m0-1058.4-9.4 5.5v139.6a30.8 30.8 0 1 0 18.8 0V340.5Zm0 159.8a14.6 14.6 0 1 1 0 29.3a14.6 14.6 0 0 1 0-29.3" style="display:inline;opacity:.5;fill:#378b85;fill-opacity:1;stroke:none;stroke-width:9;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M1024 198.8 325.7 607.6v827.9l698.3 408.8 698.2-408.8v-828Zm0 23.9 678 397v803.8l-678 396.9-678-397V619.7Z" style="display:inline;opacity:1;fill:#378b85;fill-opacity:1;stroke:none;stroke-width:10.4723;stroke-dasharray:none;stroke-opacity:1"/>
+          <path d="M274 790.4a7.7 7.7 0 0 0-7.6 7.7v29.5c0 4.3 3.4 7.7 7.7 7.7h51.6v-44.9Zm1448.2 0v44.9h51.7c4.2 0 7.7-3.4 7.7-7.7v-29.5c0-4.2-3.5-7.7-7.7-7.7zm-1448.1 105a7.7 7.7 0 0 0-7.7 7.7v29.4c0 4.3 3.4 7.7 7.7 7.7h51.6v-44.8zm1448.1 0v44.8h51.7c4.2 0 7.7-3.4 7.7-7.7v-29.4c0-4.3-3.5-7.7-7.7-7.7zM274.1 1000.3a7.7 7.7 0 0 0-7.7 7.7v29.4c0 4.3 3.4 7.7 7.7 7.7h51.6v-44.8zm1448.1 0v44.8h51.7c4.2 0 7.7-3.4 7.7-7.7V1008c0-4.3-3.5-7.7-7.7-7.7zM274.1 1105.2a7.7 7.7 0 0 0-7.7 7.7v29.4c0 4.3 3.4 7.7 7.7 7.7h51.6v-44.8zm1448.1 0v44.8h51.7c4.2 0 7.7-3.4 7.7-7.7V1113c0-4.3-3.5-7.7-7.7-7.7zm-1448.1 105a7.7 7.7 0 0 0-7.7 7.6v29.5c0 4.2 3.4 7.7 7.7 7.7h51.6V1210zm1448.1 0v44.8h51.7c4.2 0 7.7-3.5 7.7-7.7v-29.5c0-4.3-3.5-7.7-7.7-7.7z" style="display:inline;opacity:1;fill:#378b85;fill-opacity:1;stroke:none;stroke-width:1.30881;stroke-opacity:.418182"/>
+          <path d="M-523.1 631.6a9 9 0 0 1 4.2-1h25c5 0 9 4 9 9v49.3h-43v-49.4a9 9 0 0 1 4.8-7.9m-437.4 256a9 9 0 0 1 9.2-.2l43 24.2-21 37.5-43-24.2a9 9 0 0 1-3.5-12.2l12.3-21.8a9 9 0 0 1 3-3.2m565.4-256a9 9 0 0 1 4.2-1h25c5 0 9 4 9 9v49.3h-43v-49.4a9 9 0 0 1 4.8-7.9m-628 367.7a9 9 0 0 1 9.2-.2l43 24.1-21 37.5-43-24.1a9 9 0 0 1-3.5-12.3l12.2-21.8a9 9 0 0 1 3-3.2m756-367.7a9 9 0 0 1 4.2-1h25c5 0 9 4 9 9v49.3h-43v-49.4a9 9 0 0 1 4.8-7.9m-818.7 479.3a9 9 0 0 1 9.2-.2l43 24.1-21 37.5-43-24.1a9 9 0 0 1-3.5-12.3l12.3-21.8a9 9 0 0 1 3-3.2M-566.2 2109h50v48.3c0 5-4 9-9 9h-32c-5 0-9-4-9-9zm915-535.8 42.3 23.7a9 9 0 0 1 3.4 12.2l-15.7 28a9 9 0 0 1-12.2 3.4l-42.2-23.7zm-60.1 107.2 42.2 23.7a9 9 0 0 1 3.4 12.3l-15.7 27.9a9 9 0 0 1-12.2 3.4l-42.2-23.7zm-732 428.5h50v48.4c0 5-4 9-9 9h-32c-4.9 0-9-4-9-9zm671.8-321.2 42.1 23.7a9 9 0 0 1 3.5 12.2l-15.7 28a9 9 0 0 1-12.2 3.4l-42.2-23.7zm-548.7 321.2h50v48.4c0 5-4 9-9 9h-32c-5 0-9-4-9-9zm488.5-214 42.1 23.7a9 9 0 0 1 3.5 12.3l-15.7 27.9a9 9 0 0 1-12.2 3.4l-42.2-23.6zm-365.5 214h50v48.4c0 5-4 9-9 9h-32c-5 0-9-4-9-9z" style="display:inline;opacity:1;fill:#378b85;fill-opacity:1;stroke:none;stroke-width:2;stroke-opacity:.306061" transform="rotate(149.7)scale(1 -1)"/>
+        </svg>
+      </div>
+
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 inline-block mb-4 px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-bold">
         <span data-en>Tarmease... {coding with ease}</span>
         <span data-ar>ترميز... {برمجة في اللذيذ}</span>
       </div>
-      <h1 class="reveal opacity-100 translate-y-0 text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-secondary">
+      <h1 class="reveal opacity-0 translate-y-8 transition-all duration-700 text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-secondary">
         <span data-en>Your Business on <span class="text-primary">Autopilot</span></span>
         <span data-ar>شغلك شغال <span class="text-primary">لوحده</span></span>
       </h1>
-      <p class="reveal opacity-100 translate-y-0 text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <p class="reveal opacity-0 translate-y-8 transition-all duration-700 text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
         <span data-en>At Tarmease, we build smart bots and automation that handle the boring stuff, so you can focus on making that Egyptian coffee and growing your empire. No jargon, just results. 🚀</span>
         <span data-ar>في ترميز، بنعملك بوتات ذكية وأتمتة تخلصك من الشغل الممل، عشان تركز في قهوتك وتكبر شركتك. من غير كلام معقد، تنفيذ على طول. 🚀</span>
       </p>
-      <div class="reveal opacity-100 translate-y-0 flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <div class="reveal opacity-0 translate-y-8 transition-all duration-700 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="#services" class="w-full sm:w-auto px-10 py-4 bg-secondary text-white rounded-2xl font-bold text-lg shadow-xl shadow-secondary/30 transition-all duration-300 hover:scale-105 hover:brightness-110 active:scale-95">
           <span data-en>See the Magic</span>
           <span data-ar>شوف السحر</span>
@@ -141,7 +162,6 @@
 
   <!-- Services Section -->
   <section id="services" class="py-20 px-6">
-    <!-- Changed to Flexbox with wrapping and centering -->
     <div class="max-w-[90rem] mx-auto flex flex-wrap justify-center gap-6">
       <!-- Card 1: Chatbots -->
       <div class="reveal opacity-0 translate-y-8 transition-all duration-700 w-full sm:w-64 min-h-[20rem] flex flex-col items-center text-center p-8 bg-white/50 backdrop-blur-md rounded-3xl border border-white shadow-sm hover:shadow-xl group">
@@ -211,10 +231,8 @@
   </section>
 
   <!-- Social Proof Section -->
-  <!-- Updated Height: 350vh for faster scrolling -->
   <section id="social-proof-scroll" class="relative h-[350vh] bg-secondary text-white">
     <div class="sticky top-0 h-screen flex flex-col justify-center items-center overflow-hidden">
-      <!-- Background Effect -->
       <div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
       
       <div class="max-w-4xl mx-auto px-6 relative z-10 text-center w-full">
@@ -223,46 +241,30 @@
           <span data-ar>"ثانية واحدة، الأتمتة دي لأي حد؟"</span>
         </h2>
 
-        <!-- Icons Line - Updated for 5 icons and mobile responsiveness -->
         <div class="flex justify-center items-end gap-2 sm:gap-4 md:gap-12 mb-12 h-24 flex-nowrap">
-          <!-- Icon 1: Sole Worker -->
           <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="0">
             <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🛠️</span>
           </div>
-          <!-- Icon 2: Clinic/Small Biz -->
           <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="1">
             <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🩺</span>
           </div>
-          <!-- Icon 3: Workshop (New) -->
           <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="2">
             <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🪚</span>
           </div>
-          <!-- Icon 4: Restaurant -->
           <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="3">
             <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🍔</span>
           </div>
-          <!-- Icon 5: Big Corp -->
           <div class="proof-icon transition-all duration-500 transform opacity-30 scale-75 filter grayscale" data-index="4">
             <span class="text-4xl sm:text-5xl md:text-6xl cursor-default drop-shadow-lg block">🏢</span>
           </div>
         </div>
 
-        <!-- Dynamic Text Area -->
         <div class="min-h-[120px] flex flex-col items-center justify-start">
-           <!-- Indicator Line (Decor) -->
            <div class="w-16 h-1 bg-primary rounded-full mb-6 transition-all duration-300"></div>
-           
-           <!-- Fixed attributes to use data-en/data-ar so CSS handles toggling -->
-           <p id="proof-text-en" class="text-xl md:text-2xl font-medium text-slate-100 transition-all duration-500 transform translate-y-0 opacity-100 max-w-2xl leading-relaxed" data-en>
-             <!-- JS will inject text here -->
-           </p>
-           <p id="proof-text-ar" class="text-xl md:text-2xl font-medium text-slate-100 transition-all duration-500 transform translate-y-0 opacity-100 max-w-2xl leading-relaxed mt-2" data-ar>
-             <!-- JS will inject text here -->
-           </p>
+           <p id="proof-text-en" class="text-xl md:text-2xl font-medium text-slate-100 transition-all duration-500 transform translate-y-0 opacity-100 max-w-2xl leading-relaxed" data-en></p>
+           <p id="proof-text-ar" class="text-xl md:text-2xl font-medium text-slate-100 transition-all duration-500 transform translate-y-0 opacity-100 max-w-2xl leading-relaxed mt-2" data-ar></p>
         </div>
 
-        <!-- Static Punchline -->
-        <!-- Added mb-16 to push content up on mobile, preventing overlap with the scroll hint -->
         <div class="mt-4 mb-16 md:mb-0 z-20 px-4">
             <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-primary-light">
                 <span data-en>Whatever your size, we've got you covered. 🤝</span>
@@ -271,129 +273,12 @@
         </div>
       </div>
       
-      <!-- Scroll Prompt (Visible only at start) -->
       <div id="scroll-hint" class="absolute bottom-10 animate-bounce opacity-50 text-sm">
         <span data-en>Scroll to explore</span>
         <span data-ar>انزل عشان تشوف</span>
       </div>
     </div>
   </section>
-
-  <!-- Script for Scroll Interaction -->
-  <script>
-    const proofData = [
-      {
-        en: "Even if you're a skilled craftsman working with your own hands.",
-        ar: "حتى لو صنايعي حريف وشغال بدراعك."
-      },
-      {
-        en: "Or a doctor running a clinic with a waiting room full of patients.",
-        ar: "أو دكتور فاتح عيادتك والناس واقفة طوابير برة."
-      },
-      {
-        en: "Or a busy workshop crafting wonders by hand.",
-        ar: "أو ورشة شغالة نار وبتطلع شغل يتوزن بالدهب."
-      },
-      {
-        en: "Maybe you run the tastiest burger joint in the neighborhood.",
-        ar: "أو عندك مطعم وعامل أحلى برجر في المنطقة كلها."
-      },
-      {
-        en: "Or a CEO managing a huge HQ and big teams.",
-        ar: "أو حتى مدير شركة كبيرة وقد الدنيا وبتدير الليلة كلها."
-      }
-    ];
-
-    const section = document.getElementById('social-proof-scroll');
-    const icons = document.querySelectorAll('.proof-icon');
-    const textEnEl = document.getElementById('proof-text-en');
-    const textArEl = document.getElementById('proof-text-ar');
-    const scrollHint = document.getElementById('scroll-hint');
-    let currentIndex = -1;
-
-    function updateProofSection() {
-      // Need section to be available
-      if (!section) return;
-
-      // Calculate scroll progress within the section
-      const rect = section.getBoundingClientRect();
-      const sectionHeight = section.offsetHeight - window.innerHeight;
-      
-      // Safety check: if sectionHeight is <= 0 (e.g. before layout ready), avoid division by zero
-      if (sectionHeight <= 0) return;
-
-      // Calculate progress (0 to 1) based on top position
-      // We multiply by -1 because rect.top becomes negative as we scroll down
-      let progress = (rect.top * -1) / sectionHeight;
-      
-      // Handle NaN cases just to be safe
-      if (isNaN(progress)) progress = 0;
-
-      // Clamp progress between 0 and 1
-      if (progress < 0) progress = 0;
-      if (progress > 1) progress = 1;
-
-      // Determine which index we are at (0 to 4)
-      const index = Math.min(Math.floor(progress * proofData.length), proofData.length - 1);
-      
-      // Critical Safety Check: Ensure data exists at this index before accessing
-      if (!proofData[index]) return;
-
-      // Hide scroll hint once user starts scrolling deep
-      if (progress > 0.1 && scrollHint) {
-        scrollHint.style.opacity = '0';
-      } else if (scrollHint) {
-        scrollHint.style.opacity = '0.5';
-      }
-
-      // Only update DOM if index changed
-      if (index !== currentIndex) {
-        currentIndex = index;
-
-        // 1. Update Icons
-        icons.forEach((icon, i) => {
-          if (i === index) {
-            // Active State
-            icon.classList.remove('opacity-30', 'scale-75', 'filter', 'grayscale');
-            icon.classList.add('opacity-100', 'scale-125');
-          } else {
-            // Inactive State
-            icon.classList.add('opacity-30', 'scale-75', 'filter', 'grayscale');
-            icon.classList.remove('opacity-100', 'scale-125');
-          }
-        });
-
-        // 2. Update Text with a quick fade effect
-        if (textEnEl && textArEl) {
-            // Fade out
-            textEnEl.style.opacity = '0';
-            textArEl.style.opacity = '0';
-            textEnEl.style.transform = 'translateY(10px)';
-            textArEl.style.transform = 'translateY(10px)';
-
-            setTimeout(() => {
-              // Safety check again inside timeout
-              if (proofData[index]) {
-                  // Change text content (CSS handles visibility now)
-                  textEnEl.textContent = proofData[index].en;
-                  textArEl.textContent = proofData[index].ar;
-                  
-                  // Fade in
-                  textEnEl.style.opacity = '1';
-                  textArEl.style.opacity = '1';
-                  textEnEl.style.transform = 'translateY(0)';
-                  textArEl.style.transform = 'translateY(0)';
-              }
-            }, 200);
-        }
-      }
-    }
-
-    // Attach scroll listener
-    window.addEventListener('scroll', updateProofSection);
-    // Initial call
-    updateProofSection();
-  </script>
 
   <!-- Social Media Section -->
   <section class="py-20 px-6 bg-white/10">
@@ -424,10 +309,8 @@
           </svg>
         </a>
         <a href="https://www.tiktok.com/@tarmease" target="_blank" aria-label="TikTok" class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 active:scale-95 border border-slate-100">
-          <svg class="w-8 h-8" viewBox="0 0 257.85699 291.38001" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#ff004f" d="m 191.102,105.182 c 18.814,13.442 41.862,21.351 66.755,21.351 V 78.656 c -4.711,10e-4 -9.41,-0.49 -14.019,-1.466 v 37.686 c -24.891,0 -47.936,-7.909 -66.755,-21.35 v 97.703 c 0,48.876 -39.642,88.495 -88.54,88.495 -18.245,0 -35.203,-5.513 -49.29,-14.968 16.078,16.431 38.5,26.624 63.306,26.624 48.901,0 88.545,-39.619 88.545,-88.497 V 105.182 Z M 208.396,56.88 C 198.781,46.381 192.468,32.813 191.102,17.813 v -6.158 h -13.285 c 3.344,19.065 14.75,35.353 30.579,45.225 z M 70.181,227.25 c -5.372,-7.04 -8.275,-15.652 -8.262,-24.507 0,-22.354 18.132,-40.479 40.502,-40.479 4.169,-0.001 8.313,0.637 12.286,1.897 v -48.947 c -4.643,-0.636 -9.329,-0.906 -14.013,-0.807 v 38.098 c -3.976,-1.26 -8.122,-1.9 -12.292,-1.896 -22.37,0 -40.501,18.123 -40.501,40.48 0,15.808 9.063,29.494 22.28,36.161 z" id="magenta" />
-            <path fill="#000000" d="m 177.083,93.525 c 18.819,13.441 41.864,21.35 66.755,21.35 V 77.189 C 229.944,74.231 217.644,66.974 208.396,56.88 192.566,47.007 181.161,30.719 177.817,11.655 h -34.896 v 191.226 c -0.079,22.293 -18.18,40.344 -40.502,40.344 -13.154,0 -24.84,-6.267 -32.241,-15.975 -13.216,-6.667 -22.279,-20.354 -22.279,-36.16 0,-22.355 18.131,-40.48 40.501,-40.48 4.286,0 8.417,0.667 12.292,1.896 v -38.098 c -48.039,0.992 -86.674,40.224 -86.674,88.474 0,24.086 9.621,45.921 25.236,61.875 14.087,9.454 31.045,14.968 49.29,14.968 48.899,0 88.54,-39.621 88.54,-88.496 V 93.525 Z" id="black" />
-            <path fill="#00f2ea" d="m 243.838,77.189 v -10.19 c -12.529,0.019 -24.812,-3.488 -35.442,-10.12 9.41,10.297 21.801,17.397 35.442,20.31 z M 177.817,11.655 C 177.498,9.833 177.253,7.999 177.083,6.158 V 0 h -48.182 v 191.228 c -0.077,22.29 -18.177,40.341 -40.501,40.341 -6.554,0 -12.742,-1.555 -18.222,-4.318 7.401,9.707 19.087,15.973 32.241,15.973 22.32,0 40.424,-18.049 40.502,-40.342 V 11.655 Z M 100.694,114.408 V 103.56 C 96.668,103.01 92.609,102.734 88.545,102.736 39.642,102.735 0,142.356 0,191.228 c 0,30.64 15.58,57.643 39.255,73.527 -15.615,-15.953 -25.236,-37.789 -25.236,-61.874 0,-48.249 38.634,-87.481 86.675,-88.473 z" id="cyan" />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="w-8 h-8" viewBox="0 0 257.9 291.4">
+            <path fill="#ff004f" d="M191.1 105.2a114 114 0 0 0 66.8 21.3V78.7q-7.2 0-14-1.5v37.7c-25 0-48-8-66.8-21.4v97.7a88.5 88.5 0 0 1-137.8 73.6 88.5 88.5 0 0 0 151.9-61.9zm17.3-48.3c-9.6-10.5-16-24-17.3-39v-6.2h-13.3a67 67 0 0 0 30.6 45.2M70.2 227.3a40.5 40.5 0 0 1 44.5-63v-49q-7-1-14-.9v38.1a40.6 40.6 0 0 0-30.5 74.8"/><path fill="#000" d="M177 93.5a115 115 0 0 0 66.8 21.4V77.2a67 67 0 0 1-35.4-20.3 67 67 0 0 1-30.6-45.2H143v191.2a40.5 40.5 0 0 1-72.7 24.3 40.5 40.5 0 0 1 30.5-74.7v-38a88.5 88.5 0 0 0-61.4 150.3A88.5 88.5 0 0 0 177 191.3z"/><path fill="#00f2ea" d="M243.8 77.2V67a67 67 0 0 1-35.4-10.1 67 67 0 0 0 35.4 20.3m-66-65.5-.7-5.5V0h-48.2v191.2a40.5 40.5 0 0 1-58.7 36 40.5 40.5 0 0 0 72.7-24.3V11.7Zm-77.1 102.7v-10.8q-6-.9-12.2-.9a88.5 88.5 0 0 0-49.2 162 88.5 88.5 0 0 1 61.4-150.3"/>
           </svg>
         </a>
       </div>
@@ -464,14 +347,12 @@
       const body = document.body;
       const html = document.documentElement;
       const isEnglish = body.classList.contains('lang-en');
-
       body.classList.toggle('lang-en', !isEnglish);
       body.classList.toggle('lang-ar', isEnglish);
       html.setAttribute('dir', isEnglish ? 'rtl' : 'ltr');
       html.setAttribute('lang', isEnglish ? 'ar' : 'en');
     }
 
-    // Optimized intersection observer for smoother reveals
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -480,12 +361,79 @@
           revealObserver.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    const proofData = [
+      {
+        en: "Even if you're a skilled craftsman working with your own hands.",
+        ar: "حتى لو صنايعي حريف وشغال بدراعك."
+      },
+      {
+        en: "Or a doctor running a clinic with a waiting room full of patients.",
+        ar: "أو دكتور فاتح عيادتك والناس واقفة طوابير برة."
+      },
+      {
+        en: "Or a busy workshop crafting wonders by hand.",
+        ar: "أو ورشة شغالة نار وبتطلع شغل يتوزن بالدهب."
+      },
+      {
+        en: "Maybe you run the tastiest burger joint in the neighborhood.",
+        ar: "أو عندك مطعم وعامل أحلى برجر في المنطقة كلها."
+      },
+      {
+        en: "Or a CEO managing a huge HQ and big teams.",
+        ar: "أو حتى مدير شركة كبيرة وقد الدنيا وبتدير الليلة كلها."
+      }
+    ];
+
+    const section = document.getElementById('social-proof-scroll');
+    const icons = document.querySelectorAll('.proof-icon');
+    const textEnEl = document.getElementById('proof-text-en');
+    const textArEl = document.getElementById('proof-text-ar');
+    const scrollHint = document.getElementById('scroll-hint');
+    let currentIndex = -1;
+
+    function updateProofSection() {
+      if (!section) return;
+      const rect = section.getBoundingClientRect();
+      const sectionHeight = section.offsetHeight - window.innerHeight;
+      if (sectionHeight <= 0) return;
+      let progress = (rect.top * -1) / sectionHeight;
+      progress = Math.max(0, Math.min(1, isNaN(progress) ? 0 : progress));
+      const index = Math.min(Math.floor(progress * proofData.length), proofData.length - 1);
+      if (progress > 0.1 && scrollHint) {
+        scrollHint.style.opacity = '0';
+      } else if (scrollHint) {
+        scrollHint.style.opacity = '0.5';
+      }
+      if (index !== currentIndex && proofData[index]) {
+        currentIndex = index;
+        icons.forEach((icon, i) => {
+          icon.classList.toggle('opacity-30', i !== index);
+          icon.classList.toggle('scale-75', i !== index);
+          icon.classList.toggle('filter', i !== index);
+          icon.classList.toggle('grayscale', i !== index);
+          icon.classList.toggle('opacity-100', i === index);
+          icon.classList.toggle('scale-125', i === index);
+        });
+        textEnEl.style.opacity = '0';
+        textArEl.style.opacity = '0';
+        textEnEl.style.transform = 'translateY(10px)';
+        textArEl.style.transform = 'translateY(10px)';
+        setTimeout(() => {
+          textEnEl.textContent = proofData[index].en;
+          textArEl.textContent = proofData[index].ar;
+          textEnEl.style.opacity = '1';
+          textArEl.style.opacity = '1';
+          textEnEl.style.transform = 'translateY(0)';
+          textArEl.style.transform = 'translateY(0)';
+        }, 200);
+      }
+    }
+    window.addEventListener('scroll', updateProofSection);
+    updateProofSection();
   </script>
 </body>
-
 </html>
